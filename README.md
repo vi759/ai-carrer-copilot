@@ -1,47 +1,222 @@
-# AI Career Copilot
+# 🚀 CareerPilot AI
 
-A modern web application to help job seekers improve their chances by analyzing resume PDFs against job descriptions, generating ATS scores, identifying missing skills, providing personalized learning roadmaps, tailored interview questions, and a cover letter draft.
+CareerPilot AI is a full-stack career guidance platform that helps job seekers evaluate their resumes against target job descriptions. The application analyzes uploaded PDF resumes, identifies skill gaps, generates personalized learning roadmaps, and provides interview preparation recommendations.
 
-## Tech Stack
-- FastAPI backend
-- HTML / CSS / JavaScript frontend
-- Gemini API via `google.genai`
-- PyMuPDF for PDF parsing
+---
 
-## Setup
-1. Create a Python virtual environment in `backend`:
-   ```powershell
-   cd backend
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   ```
-2. Copy the example environment file:
-   ```powershell
-   copy .env.example .env
-   ```
-3. Add your Gemini API key to `backend/.env`:
-   ```text
-   GOOGLE_API_KEY=your_gemini_api_key_here
-   GOOGLE_MODEL=gemini-1.5-flash
-   ```
-4. Run the backend server:
-   ```powershell
-   uvicorn app.adapters.api.main:app --reload --host 0.0.0.0 --port 8000
-   ```
-5. Open `frontend/index.html` in your browser or serve it with any static server.
+## 📌 Overview
 
-## Features
-- Upload resume PDF
-- Paste job description
-- ATS score analysis
-- Skill match percentage
-- Missing skills detection
-- Resume improvement suggestions
-- Personalized learning roadmap
-- Interview question generation
-- Cover letter draft generation
+Finding the right skills for a target role can be challenging. CareerPilot AI simplifies this process by comparing a candidate's resume with a job description and generating actionable insights to improve job readiness.
 
-## Notes
-- Backend reads `backend/.env` for the Gemini API key and model name.
-- If you prefer a deployed frontend, host the `frontend/` contents with any static site server.
+The platform helps users:
+
+* Upload and analyze PDF resumes
+* Identify existing and missing skills
+* Understand skill match percentage
+* Receive personalized learning recommendations
+* Prepare with role-specific interview questions
+
+---
+
+## ✨ Features
+
+### 📄 Resume Upload & Parsing
+
+* Upload resumes in PDF format
+* Extract resume content using PyMuPDF
+
+### 🎯 Skill Analysis
+
+* Detect technical and professional skills present in the resume
+* Compare resume skills with job requirements
+
+### 📊 Skill Gap Identification
+
+* Highlight missing skills required for the target role
+* Provide recommendations for improvement
+
+### 📚 Learning Roadmap
+
+* Generate structured learning paths
+* Suggest areas to focus on for career growth
+
+### 🎤 Interview Preparation
+
+* Generate tailored interview questions
+* Help candidates prepare for technical and behavioral interviews
+
+### 🌐 Interactive Web Interface
+
+* Simple and responsive user interface
+* FastAPI-powered backend APIs
+* Real-time analysis results
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* Python
+* FastAPI
+* PyMuPDF
+* Pydantic
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
+
+---
+
+## 📂 Project Structure
+
+```text
+careerpilot-ai/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── services/
+│   │   ├── models/
+│   │   └── core/
+│   │
+│   ├── requirements.txt
+│   └── .env
+│
+└── frontend/
+    ├── index.html
+    ├── style.css
+    └── app.js
+```
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/careerpilot-ai.git
+cd careerpilot-ai
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+### Activate Environment
+
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Mac/Linux
+
+```bash
+source .venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run Backend
+
+```bash
+uvicorn app.adapters.api.main:app --reload
+```
+
+Backend will run at:
+
+```text
+http://127.0.0.1:8000
+```
+
+Swagger API Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## ▶️ Run Frontend
+
+Open:
+
+```text
+frontend/index.html
+```
+
+Or use a local server:
+
+```bash
+python -m http.server 5500
+```
+
+Then visit:
+
+```text
+http://localhost:5500
+```
+
+---
+
+## 📈 Sample Workflow
+
+1. Upload a PDF resume.
+2. Paste the target job description.
+3. Click **Analyze Resume**.
+4. View:
+
+   * ATS Score
+   * Skill Match Percentage
+   * Missing Skills
+   * Learning Roadmap
+   * Interview Questions
+   * Resume Suggestions
+
+---
+
+## 🎯 Future Enhancements
+
+* AI-powered resume rewriting
+* Cover letter generation
+* Personalized career recommendations
+* Multi-role analysis
+* Dashboard analytics
+* Cloud deployment
+
+---
+
+## 💡 Business Value
+
+CareerPilot AI helps students, fresh graduates, and professionals understand how well their profiles align with target roles and provides actionable recommendations to improve employability.
+
+---
+
+## 👨‍💻 Author
+
+**Patati Yasaswi**
+
+* Data Science Graduate
+* Python Developer
+* AI & Data Analytics Enthusiast
+
+LinkedIn: [www.linkedin.com/in/patati-yasaswi2](http://www.linkedin.com/in/patati-yasaswi2)
+
+GitHub: https://github.com/PatatiYasaswi
