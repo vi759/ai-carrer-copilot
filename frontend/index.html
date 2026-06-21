@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Career Copilot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Career Copilot</h1>
+
+        <div class="card">
+
+            <h3>Upload Resume</h3>
+
+            <input
+                type="file"
+                id="resume"
+                accept=".pdf"
+            >
+
+            <textarea
+                id="jobDescription"
+                placeholder="Paste Job Description Here..."
+            ></textarea>
+
+            <button onclick="analyzeResume()">
+                Analyze Resume
+            </button>
+
+        </div>
+
+        <div class="card" id="results">
+
+            <h2>ATS Results</h2>
+
+            <p>
+                ATS Score:
+                <span id="atsScore">-</span>
+            </p>
+
+            <p>
+                Skill Match:
+                <span id="skillMatch">-</span>
+            </p>
+
+            <h3>Missing Skills</h3>
+
+            <ul id="missingSkills"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
