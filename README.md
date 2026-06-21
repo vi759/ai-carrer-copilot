@@ -207,16 +207,3 @@ http://localhost:5500
 
 CareerPilot AI helps students, fresh graduates, and professionals understand how well their profiles align with target roles and provides actionable recommendations to improve employability.
 
----
-
-## 👨‍💻 Author
-
-**Patati Yasaswi**
-
-* Data Science Graduate
-* Python Developer
-* AI & Data Analytics Enthusiast
-
-LinkedIn: [www.linkedin.com/in/patati-yasaswi2](http://www.linkedin.com/in/patati-yasaswi2)
-
-GitHub: https://github.com/PatatiYasaswi
